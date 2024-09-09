@@ -1,15 +1,12 @@
 package ru.netology.data;
 
 import com.github.javafaker.Faker;
-import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Value;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Locale;
-
 
 public class DataHelper {
     private static final Faker FAKER = new Faker(new Locale("en"));
@@ -41,5 +38,6 @@ public class DataHelper {
     public static class VerificationCode{
         String code;
     }
+
 
 }
