@@ -44,9 +44,3 @@ out/
 !**/src/main/**
 !**/src/test/**
 
-build.gradle
-gradle/
-gradlew
-gradlew.bat
-lombok.config
-settings.gradle

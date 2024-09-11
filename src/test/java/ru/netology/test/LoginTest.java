@@ -5,8 +5,6 @@ import ru.netology.data.DataHelper;
 import ru.netology.data.SQLHelper;
 import ru.netology.page.LoginPage;
 
-import javax.management.Notification;
-
 import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.data.SQLHelper.cleanAuthCodes;
 import static ru.netology.data.SQLHelper.cleanDatabase;
@@ -47,3 +45,7 @@ public class LoginTest {
         var authInfo = DataHelper.getAuthInfoWithTestData();
     }
 }
+
+
+// java -jar ./artifacts/app-deadline.jar -P:jdbc.url=jdbc:mysql://185.119.57.126:3306/db
+// ./gradlew clean test
