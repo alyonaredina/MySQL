@@ -43,6 +43,11 @@ public class LoginTest {
     @DisplayName("Should get error notification if login with exist in base and active user and random verification code")
     void shouldGetErrorNotificationIfLoginWithExistUserAndRandomVerificationCode(){
         var authInfo = DataHelper.getAuthInfoWithTestData();
+        var verificationPage = loginPage.validLogin((authInfo));
+        verificationPage.verifyVerificationPageVisiblity();
+        var verificationCode = DataHelper.generateRandomVerificationCode();
+        verificationPage.verify(verificationCode.getCode());
+        verificationPage.verifyErrorNotification("Ошибка! \nНеверно указан код! Попробуйте ещё раз.");
     }
 }
 
